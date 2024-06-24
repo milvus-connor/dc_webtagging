@@ -19,7 +19,7 @@ window.addEventListener('load', (event) => {
             name: "Entered Page",
             euNo: 123456,
             loginType: "true",
-            deviceType: window.navigator.userAgent,
+            // deviceType: window.navigator.userAgent,
             browserOsType: window.navigator.userAgent,
             eventType: "childFundEntered",
             entered: {
@@ -32,5 +32,5 @@ window.addEventListener('load', (event) => {
             //eventId, category, dateTime, deviceId, sessionId 자동 생성
         }
     });
-    console.log("05:13ㄴ")
+    console.log("05:16")
 });
