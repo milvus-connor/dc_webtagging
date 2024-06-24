@@ -15,6 +15,7 @@ window.addEventListener('load', (event) => {
         interaction: {
             name: "Entered Page",
             eventType: "childFundEntered",
+            interactionName: "페이지 방문",
             entered: {
                 fullUrl: window.location.href,
             }
