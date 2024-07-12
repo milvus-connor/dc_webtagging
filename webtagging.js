@@ -17,9 +17,9 @@ window.addEventListener('load', (event) => {
     console.log(titleName);
     SalesforceInteractions.sendEvent({
         interaction: {
-            eventType: "pageEntered",
             name: titleName, //Schema의 interactionName에 해당 //페이지 Title 정보 입력
-            euNo: 123456, //고객 EU_NO
+            eventType: "pageEntered",
+            euNo: "123456", //고객 EU_NO
             loginType: "true", //
             deviceType: window.navigator.userAgent,
             browserOsType: window.navigator.userAgent,
