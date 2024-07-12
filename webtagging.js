@@ -19,14 +19,15 @@ window.addEventListener('load', (event) => {
             eventType: "pageEntered",
             name: "방문페이지 Title", //Schema의 interactionName에 해당 //페이지 Title 정보 입력
             euNo: "123456", //고객 EU_NO
-            enteredFullUrl: window.location.href,
-            enteredPageDep2: "/depth2",
-            enteredPageDep3: "/depth3",
-            enteredPageDep4: "/depth4",
+            fullUrl: window.location.href,
+            pageDep2: "/depth2",
+            pageDep3: "/depth3",
+            pageDep4: "/depth4",
             //eventId, category, dateTime, deviceId, sessionId 자동 생성
         }
     });
     
+    //로그인 완료 시
     document.querySelector(".login").addEventListener("click", () => {
         SalesforceInteractions.sendEvent({
             interaction: {
@@ -35,8 +36,8 @@ window.addEventListener('load', (event) => {
                 euNo: "123456", //고객 EU_NO
                 loginType: "naver", //로그인 타입
                 deviceType: "PC", //로그인 기기
-                browserOsType: "Chrome", //로그인 브라우저
-                enteredLocation: "KR" //로그인 지역
+                browserOs: "Chrome", //로그인 브라우저
+                location: "KR" //로그인 지역
                 //eventId, category, dateTime, deviceId, sessionId 자동 생성
             }
         });
