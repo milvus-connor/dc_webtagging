@@ -17,18 +17,41 @@ window.addEventListener('load', (event) => {
     console.log(titleName);
     SalesforceInteractions.sendEvent({
         interaction: {
-            name: titleName, //Schema의 interactionName에 해당
-            euNo: 123456,
-            loginType: "true",
+            eventType: "pageEntered",
+            name: titleName, //Schema의 interactionName에 해당 //페이지 Title 정보 입력
+            euNo: 123456, //고객 EU_NO
+            loginType: "true", //
             deviceType: window.navigator.userAgent,
             browserOsType: window.navigator.userAgent,
-            eventType: "pageEntered",
-            enteredlocation: window.navigator.language,
-            enteredFullUrl: window.location.href,
-            enteredPageDep2: "/depth2",
-            enteredPageDep3: "/depth3",
-            enteredPageDep4: "/depth4",
+            entered: {
+                location: window.navigator.language,
+                fullUrl: window.location.href,
+                pageDep2: "/depth2",
+                pageDep3: "/depth3",
+                pageDep4: "/depth4"
+            }
+            // enteredlocation: window.navigator.language,
+            // enteredFullUrl: window.location.href,
+            // enteredPageDep2: "/depth2",
+            // enteredPageDep3: "/depth3",
+            // enteredPageDep4: "/depth4",
             //eventId, category, dateTime, deviceId, sessionId 자동 생성
         }
     });
+
+    //페이지 진입 시
+    // SalesforceInteractions.sendEvent({
+    //     interaction: {
+    //         eventType: "pageEntered",
+    //         name: titleName, //Schema의 interactionName에 해당 //페이지 Title 정보 입력
+    //         euNo: 123456, //고객 EU_NO
+    //         enteredFullUrl: window.location.href,
+    //         enteredPageDep2: "/depth2",
+    //         enteredPageDep3: "/depth3",
+    //         enteredPageDep4: "/depth4",
+    //         //eventId, category, dateTime, deviceId, sessionId 자동 생성
+    //     }
+    // });
+
+    //로그인 성공 시
 });
